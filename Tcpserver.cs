@@ -9,6 +9,8 @@ namespace TcpServer
     class TcpServerTest
     {
 
+        private Repository repository = new Repository();
+
         private readonly string _connectionString; 
         public TcpServerTest(String connectionString)
         {
@@ -67,11 +69,14 @@ namespace TcpServer
                                 {
                                     isLogging = true;
                                     stream.Write(responseServer, 0, responseServer.Length);
-                                }else stream.Write(responseServer, 0, responseServer.Length);
+                                }
+                                else stream.Write(responseServer, 0, responseServer.Length);
                                 
 
-                            }
+                            }else{
+                            repository.insert(jsonRequest);
                             Console.WriteLine(jsonRequest);
+                            }
                         }
                     }
                     catch (Exception ex)
