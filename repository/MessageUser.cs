@@ -37,6 +37,38 @@ class MessageUser
 
     }
 
+    public List<MessageModel> ambilRiwayatPesan()
+    {
+        var listRiwayat = new List<MessageModel>();
+        
+        string query = "SELECT sender_name, message FROM messages ORDER BY created_at ASC";
+
+        using var connection = new MySqlConnection(_connectionString);
+        try
+        {
+            using var command = new MySqlCommand(query, connection);
+            connection.Open();
+
+            using var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                var pesan = new MessageModel
+                {
+                    SenderName = reader["sender_name"].ToString()!,
+                    MessageText = reader["message"].ToString()!
+                };
+                listRiwayat.Add(pesan);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[DATABASE ERROR] Gagal mengambil riwayat: {ex.Message}");
+        }
+
+        return listRiwayat;
+    }
+
 
     public void parsingString(String input)
     {
