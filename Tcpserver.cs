@@ -11,6 +11,7 @@ namespace TcpServer
 
         private Repository repository = new Repository();
 
+
         private readonly string _connectionString; 
         public TcpServerTest(String connectionString)
         {
@@ -74,7 +75,8 @@ namespace TcpServer
                                 
 
                             }else{
-                            repository.insert(jsonRequest);
+                            MessageUser messageUser = new MessageUser(_connectionString);
+                            messageUser.insertMessage(jsonRequest);
                             Console.WriteLine(jsonRequest);
                             }
                         }

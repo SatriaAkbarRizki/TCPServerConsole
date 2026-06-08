@@ -44,3 +44,4 @@ d:\Document\Kampus\Pemrograman Jaringan\Program TCP\Console\TCPServerConsole\bin
 d:\Document\Kampus\Pemrograman Jaringan\Program TCP\Console\TCPServerConsole\bin\Debug\net10.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
 d:\Document\Kampus\Pemrograman Jaringan\Program TCP\Console\TCPServerConsole\obj\Debug\net10.0\TCPServerConsole.csproj.AssemblyReference.cache
 d:\Document\Kampus\Pemrograman Jaringan\Program TCP\Console\TCPServerConsole\obj\Debug\net10.0\TCPServe.5C5D6BE5.Up2Date
+d:\Document\Kampus\Pemrograman Jaringan\Program TCP\Console\TCPServerConsole\obj\Debug\net10.0\TCPServerConsole.sourcelink.json
